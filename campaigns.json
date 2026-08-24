@@ -5,6 +5,8 @@
         "description": "",
         "image_url": "https://play-lh.googleusercontent.com/nXGneEUEvGyrQRGWd0H1NN25woTkGcSHHP9dHjj_KQIM57psfCtVZIL7AJjsj2QwHQ",
         "category": "생활",
+        "type": "앱설치형",
+        "os": "Both",
         "click_url": "https://deg.kr/8ceb2f2"
     },
     {
@@ -13,6 +15,8 @@
         "description": "",
         "image_url": "https://play-lh.googleusercontent.com/5Oka7krmmjpYC_W4DraT07RNM5eeOX0Tk7mM-7HethUjPyR029OZUHM-DpP8IWZQHio",
         "category": "생활",
+        "type": "앱설치형",
+        "os": "Both",
         "click_url": "https://deg.kr/58f20fc"
     },
     {
@@ -21,6 +25,8 @@
         "description": "",
         "image_url": "https://s3.ap-northeast-2.amazonaws.com/oddm.img/2026/4ca0618dbf1777511480.png",
         "category": "생활",
+        "type": "앱설치형",
+        "os": "Both",
         "click_url": "https://deg.kr/246ea40"
     },
     {
@@ -29,6 +35,8 @@
         "description": "화물차 리스 전문 화물박사",
         "image_url": "https://s3.ap-northeast-2.amazonaws.com/oddm.img/2024/18474ba71f1712027552.jpg",
         "category": "쇼핑",
+        "type": "앱설치형",
+        "os": "Both",
         "click_url": "https://deg.kr/2143c2e"
     },
     {
@@ -37,6 +45,8 @@
         "description": "쇼핑정보로 재테크하는 꿀팁! 애드픽 쇼핑메이트",
         "image_url": "https://d1cs39pa9zf28u.cloudfront.net/script/image.php?w=256&f=https://d4jzqlmz11rgq.cloudfront.net/2020/939eb596f96176b2c54778939fa09f431586418837.png",
         "category": "생활",
+        "type": "가입형",
+        "os": "Both",
         "click_url": "https://deg.kr/476a71d"
     },
     {
@@ -45,6 +55,8 @@
         "description": "신차 장기렌터카/리스 알아볼 때 필수 앱 김보성의 차고",
         "image_url": "https://s3.ap-northeast-2.amazonaws.com/oddm.img/2020/1f3e342e283f353ec2d3c83021c20e411591260309.jpg",
         "category": "생활",
+        "type": "앱설치형",
+        "os": "Both",
         "click_url": "https://deg.kr/3b8eee8"
     },
     {
@@ -53,6 +65,8 @@
         "description": "무한 매칭, 쉽고 빠른 100만 채팅 어플 ‘아마시아’",
         "image_url": "https://s3.ap-northeast-2.amazonaws.com/oddm.img/2022/4cb78460591650010792.png",
         "category": "생활",
+        "type": "앱설치형",
+        "os": "Both",
         "click_url": "https://deg.kr/8f923bc"
     }
 ]

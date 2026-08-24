@@ -13,12 +13,18 @@ CATEGORY_MAP = {
     "5": "웹툰"
 }
 
+TYPE_MAP = {
+    "1": "앱설치형",
+    "3": "가입형",
+    "4": "이벤트형",
+    "16": "사전예약"
+}
+
 def fetch_adpick_campaigns():
     try:
         response = requests.get(API_URL, timeout=15)
         response.raise_for_status()
         
-        # Some PHP APIs return empty string or non-JSON if no data, let's be safe
         text_data = response.text.strip()
         if not text_data:
             return []
@@ -28,9 +34,11 @@ def fetch_adpick_campaigns():
         campaigns = []
         for item in data:
             cat_code = str(item.get("apCategory", ""))
-            cat_name = CATEGORY_MAP.get(cat_code, "기타")
+            type_code = str(item.get("apType", ""))
             
-            # Prefer wide banners, fallback to icon
+            cat_name = CATEGORY_MAP.get(cat_code, "기타")
+            type_name = TYPE_MAP.get(type_code, "참여형")
+            
             images = item.get("apImages", {})
             image_url = (
                 images.get("banner1024x500") or 
@@ -46,6 +54,8 @@ def fetch_adpick_campaigns():
                 "description": item.get("apHeadline", ""),
                 "image_url": image_url,
                 "category": cat_name,
+                "type": type_name,
+                "os": item.get("apOS", "Both"),
                 "click_url": item.get("apTrackingLink", "#")
             }
             campaigns.append(campaign)
