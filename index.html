@@ -36,7 +36,8 @@
         let allCampaigns = [];
         async function loadCampaigns() {
             try {
-                const response = await fetch('campaigns.json');
+                // 캐시 방지를 위해 URL 뒤에 현재 시간(타임스탬프)을 붙입니다.
+                const response = await fetch('campaigns.json?v=' + new Date().getTime());
                 allCampaigns = await response.json();
                 renderCategories();
                 renderCampaigns('전체');
