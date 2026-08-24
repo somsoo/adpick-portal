@@ -1,0 +1,57 @@
+import os
+import json
+from datetime import datetime
+
+# TODO: Replace with actual Adpick API call when API Key is provided
+def fetch_adpick_campaigns(api_key):
+    # Dummy data for UI building
+    return [
+        {
+            "id": "1",
+            "title": "초보자도 쉽게 배우는 파이썬 코딩 강의",
+            "description": "파이썬 기초부터 실전까지 완벽 마스터! 수강 신청 시 전원 50% 할인 쿠폰 증정.",
+            "image_url": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+            "category": "교육/학원",
+            "reward": "15,000",
+            "click_url": "https://example.com/click/1"
+        },
+        {
+            "id": "2",
+            "title": "MMORPG 대작 '블러드 소드' 사전예약",
+            "description": "지금 사전예약하면 10만원 상당의 아이템 100% 지급! 역대급 스케일의 공성전을 경험하세요.",
+            "image_url": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+            "category": "게임",
+            "reward": "2,500",
+            "click_url": "https://example.com/click/2"
+        },
+        {
+            "id": "3",
+            "title": "2026 베스트셀러 '성공하는 습관'",
+            "description": "올해 가장 많이 팔린 자기계발서. 구매 시 특별 한정판 다이어리 증정 이벤트 진행 중.",
+            "image_url": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+            "category": "도서",
+            "reward": "1,000",
+            "click_url": "https://example.com/click/3"
+        },
+        {
+            "id": "4",
+            "title": "프리미엄 밀키트 첫 구매 100원 딜!",
+            "description": "신규 회원 가입하고 인기 밀키트를 100원에 득템하세요. 빠르고 신선한 새벽배송 보장.",
+            "image_url": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+            "category": "쇼핑/식품",
+            "reward": "5,000",
+            "click_url": "https://example.com/click/4"
+        }
+    ]
+
+def main():
+    api_key = os.environ.get("ADPICK_API_KEY", "")
+    campaigns = fetch_adpick_campaigns(api_key)
+    
+    with open('campaigns.json', 'w', encoding='utf-8') as f:
+        json.dump(campaigns, f, ensure_ascii=False, indent=4)
+        
+    print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Successfully updated campaigns.json with {len(campaigns)} campaigns.")
+
+if __name__ == "__main__":
+    main()
