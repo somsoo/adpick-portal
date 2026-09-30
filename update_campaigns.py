@@ -69,9 +69,9 @@ def main():
     campaigns = fetch_adpick_campaigns()
     
     if campaigns:
-        with open('campaigns.json', 'w', encoding='utf-8') as f:
+        with open('offers.json', 'w', encoding='utf-8') as f:
             json.dump(campaigns, f, ensure_ascii=False, indent=4)
-        print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Successfully updated campaigns.json with {len(campaigns)} campaigns.")
+        print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Successfully updated offers.json with {len(campaigns)} campaigns.")
     else:
         print("No campaigns fetched or API returned empty.")
 
