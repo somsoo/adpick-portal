@@ -13,6 +13,37 @@
         .card-hover:hover { transform: translateY(-4px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
     </style>
   <link rel="canonical" href="https://adpick.enjoy-onepage.com/">
+<script id="math-guard">
+// Global Math & DOM Output Guard: prevents NaN / Infinity leaks to UI
+(function() {
+  const origToLocaleString = Number.prototype.toLocaleString;
+  Number.prototype.toLocaleString = function(locales, options) {
+    if (!Number.isFinite(this.valueOf())) return '0';
+    return origToLocaleString.call(this, locales, options);
+  };
+  const origToFixed = Number.prototype.toFixed;
+  Number.prototype.toFixed = function(digits) {
+    if (!Number.isFinite(this.valueOf())) return '0';
+    return origToFixed.call(this, digits);
+  };
+})();
+</script>
+<style id="global-quality-shield">
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+  .ad-bottom, .ad-bottom ins {
+    min-height: 280px !important;
+    background: transparent !important;
+  }
+  :focus-visible {
+    outline: 2px solid #2563eb !important;
+    outline-offset: 2px !important;
+  }
+</style>
 </head>
 <body class="text-gray-800">
     <header class="bg-white shadow-sm sticky top-0 z-50">
