@@ -1,22 +1,12 @@
 [
     {
-        "id": "e4cb7",
-        "title": "화물차리스 전문 화물박사 - 1톤트럭, 특장차 즉시출고",
-        "description": "화물차 리스 전문 화물박사",
-        "image_url": "https://d4jzqlmz11rgq.cloudfront.net/2024/18474ba71f1712027552.jpg",
-        "category": "쇼핑",
-        "type": "앱설치형",
-        "os": "Both",
-        "click_url": "https://deg.kr/2143c2e"
-    },
-    {
         "id": "a8753",
         "title": "애드픽 쇼핑메이트 회원가입",
         "description": "쇼핑정보로 재테크하는 꿀팁! 애드픽 쇼핑메이트",
         "image_url": "https://d2iaagr1j041pi.cloudfront.net/apis/image.php?w=256&f=https://d4jzqlmz11rgq.cloudfront.net/2020/939eb596f96176b2c54778939fa09f431586418837.png",
         "category": "생활",
         "type": "가입형",
-        "os": "Both",
+        "os": null,
         "click_url": "https://deg.kr/476a71d"
     },
     {
